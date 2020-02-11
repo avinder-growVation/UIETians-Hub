@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="top"
+            android:scaleY="1.2"
+            android:text="Add/Update Committee"
+            android:textColor="#111"
+            android:textScaleX="1.2"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ibBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/ibBack"
+            app:layout_constraintTop_toTopOf="@+id/ibBack" />
+
+        <ImageView
+            android:id="@+id/ivDetails"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:background="#ccc"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:srcCompat="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/ivCover"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/bg_rounded_image"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:srcCompat="@drawable/ic_select_image" />
+
+        <TextView
+            android:id="@+id/tvAddCover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Cover Image"
+            android:textColor="#555"
+            android:textSize="15sp"
+            app:layout_constraintVertical_bias="0.45"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintBottom_toBottomOf="@+id/ivDetails"
+            app:layout_constraintEnd_toEndOf="@id/ivDetails"
+            app:layout_constraintStart_toStartOf="@id/ivDetails"
+            app:layout_constraintTop_toTopOf="@+id/ivDetails" />
+
+        <TextView
+            android:id="@+id/tvNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="Name:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/etName"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toTopOf="@+id/etName" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:inputType="textPersonName"
+            android:textSize="15sp"
+            android:textColor="#111"
+            android:theme="@style/MyEditTextStyle"
+            app:layout_constraintEnd_toStartOf="@+id/glV94"
+            app:layout_constraintStart_toEndOf="@+id/tvNameTitle"
+            app:layout_constraintTop_toBottomOf="@id/ivCover" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textSize="20sp"
+            android:textColor="#e05252"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintBottom_toBottomOf="@+id/etName"
+            app:layout_constraintStart_toEndOf="@+id/etName"
+            app:layout_constraintTop_toTopOf="@+id/etName" />
+
+        <TextView
+            android:id="@+id/tvDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Description:"
+            android:textSize="17sp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameTitle" />
+
+        <TextView
+            android:id="@+id/tvDetailsCharCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textSize="12sp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="0/4000"
+            android:textColor="#555"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDetailsTitle"
+            app:layout_constraintEnd_toEndOf="@+id/etDetails"
+            app:layout_constraintTop_toTopOf="@+id/tvDetailsTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="*"
+            android:textSize="20sp"
+            android:textColor="#e05252"
+            android:layout_marginTop="1dp"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDetailsCharCount"
+            app:layout_constraintStart_toEndOf="@+id/etName"
+            app:layout_constraintTop_toTopOf="@+id/tvDetailsTitle" />
+
+        <EditText
+            android:id="@+id/etDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLength="4000"
+            android:textColor="#111"
+            android:textSize="15sp"
+            android:theme="@style/MyEditTextStyle"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/glV94"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsTitle" />
+
+        <TextView
+            android:id="@+id/tvContactTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Contact:"
+            android:textSize="17sp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toBottomOf="@+id/etDetails" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:text="*"
+            android:textColor="#e05252"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/etName"
+            app:layout_constraintTop_toTopOf="@+id/tvContactTitle" />
+
+        <EditText
+            android:id="@+id/etContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:textColor="#111"
+            android:theme="@style/MyEditTextStyle"
+            android:scrollbars="vertical"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/glV94"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toBottomOf="@+id/tvContactTitle" />
+
+        <TextView
+            android:id="@+id/tvAboutTeamTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="About Team:"
+            android:textSize="17sp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toBottomOf="@+id/etContact" />
+
+        <TextView
+            android:id="@+id/tvAboutTeamCharCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textSize="12sp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="0/200"
+            android:textColor="#555"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAboutTeamTitle"
+            app:layout_constraintEnd_toEndOf="@+id/etDetails"
+            app:layout_constraintTop_toTopOf="@+id/tvAboutTeamTitle" />
+
+        <EditText
+            android:id="@+id/etAboutTeam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:maxLength="200"
+            android:textColor="#111"
+            android:theme="@style/MyEditTextStyle"
+            android:scrollbars="vertical"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/glV94"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toBottomOf="@+id/tvAboutTeamTitle" />
+
+        <TextView
+            android:id="@+id/tvWebPageLinkTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Web/Page Link:"
+            android:textSize="17sp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toBottomOf="@+id/etAboutTeam" />
+
+        <EditText
+            android:id="@+id/etWebPageLink"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:inputType="textPersonName"
+            android:textColor="#111"
+            android:theme="@style/MyEditTextStyle"
+            android:scrollbars="vertical"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/glV94"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toBottomOf="@+id/tvWebPageLinkTitle" />
+
+        <TextView
+            android:id="@+id/tvOtherInfoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Other Info:"
+            android:textSize="17sp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toBottomOf="@+id/etWebPageLink" />
+
+        <TextView
+            android:id="@+id/tvOtherInfoCharCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textSize="12sp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="0/500"
+            android:textColor="#555"
+            app:layout_constraintBottom_toBottomOf="@+id/tvOtherInfoTitle"
+            app:layout_constraintEnd_toEndOf="@+id/etDetails"
+            app:layout_constraintTop_toTopOf="@+id/tvOtherInfoTitle" />
+
+        <EditText
+            android:id="@+id/etOtherInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLength="500"
+            android:textColor="#111"
+            android:theme="@style/MyEditTextStyle"
+            android:scrollbars="vertical"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/glV94"
+            app:layout_constraintStart_toStartOf="@+id/glV06"
+            app:layout_constraintTop_toBottomOf="@+id/tvOtherInfoTitle" />
+
+        <TextView
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:background="@drawable/bg_rounded_button"
+            android:text="Save"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textColor="#fff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etOtherInfo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/glV06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.061"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/glV94"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94"/>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

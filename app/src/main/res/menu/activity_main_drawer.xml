@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@drawable/ic_user"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_about_us"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_rate_us"
+            android:icon="@drawable/ic_rate_us"
+            android:title="Rate Us" />
+        <item
+            android:id="@+id/nav_other_apps"
+            android:icon="@drawable/ic_play_store"
+            android:title="Our other apps" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share"
+            android:title="Share" />
+        <item
+            android:id="@+id/nav_leave_performa"
+            android:icon="@drawable/ic_leave_performa"
+            android:title="Leave Performa" />
+        <item
+            android:id="@+id/nav_sign_out"
+            android:icon="@drawable/icon_sign_out"
+            android:title="Sign Out" />
+        <item
+            android:id="@+id/nav_privacy_policy"
+            android:icon="@drawable/ic_privacy_policy"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_exit"
+            android:title="Exit" />
+    </group>
+</menu>

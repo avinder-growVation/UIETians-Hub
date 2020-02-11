@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="Digital"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="15sp"
+        android:ellipsize="end"
+        android:textColor="#111"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:background="@drawable/bg_spinner"
+        app:layout_constraintTop_toBottomOf="@id/tvNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/spSubject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:background="@drawable/bg_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNote" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/spSubject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbMajor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_margin="20dp"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="#333"
+            android:text="Major"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/rbMinor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="#333"
+            android:text="Minor"
+            android:textSize="17sp" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/ivUpload"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_rounded_image"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:srcCompat="@drawable/ic_select_file" />
+
+    <TextView
+        android:id="@+id/tvFilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUpload" />
+
+    <TextView
+        android:id="@+id/btnUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:background="@drawable/bg_rounded_button"
+        android:text="Upload"
+        android:textSize="14sp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFilename" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="invisible"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
+
+</android.support.constraint.ConstraintLayout>

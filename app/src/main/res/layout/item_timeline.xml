@@ -1,0 +1,64 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="11dp"
+        android:text="Title"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/montserrat"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTimeElapsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:text="7 mins ago"
+        android:textColor="#222"
+        android:fontFamily="@font/montserrat"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/ivPlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:background="@drawable/bg_rounded_image"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@android:color/transparent"/>
+
+    <ImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        app:srcCompat="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/tvDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:textColor="#111" />
+    </LinearLayout>

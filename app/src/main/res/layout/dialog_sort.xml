@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_sort_dialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvLatestFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="@color/colorPrimary"
+        android:text="Latest"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tvOldestFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Oldest"
+        android:textSize="18sp" />
+</LinearLayout>

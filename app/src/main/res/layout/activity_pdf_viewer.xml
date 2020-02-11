@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jsibbold.zoomage.ZoomageView
+        android:id="@+id/ivFullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:zoomage_restrictBounds="true"
+        app:zoomage_animateOnReset="true"
+        app:zoomage_autoResetMode="UNDER"
+        app:zoomage_autoCenter="true"
+        app:zoomage_zoomable="true"
+        app:zoomage_translatable="true"
+        app:zoomage_minScale="0.6"
+        app:zoomage_maxScale="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivRightArrow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_right_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLeftArrow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_left_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_close_black"
+        android:scaleX="0.45"
+        android:scaleY="0.45"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/ivDownload"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/ic_download_black"
+        android:scaleX="0.55"
+        android:scaleY="0.57"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/ivClose"
+        app:layout_constraintTop_toTopOf="@id/ivClose"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/ivImages"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_image_black"
+        android:scaleX="0.55"
+        android:scaleY="0.57"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/ivDownload"
+        app:layout_constraintTop_toTopOf="@id/ivDownload"
+        app:srcCompat="@android:color/transparent" />
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:theme="@style/MyAlertDialogStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPageNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:layout_margin="5dp"
+        android:text="0 %"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="#222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pbLoading" />
+
+</android.support.constraint.ConstraintLayout>

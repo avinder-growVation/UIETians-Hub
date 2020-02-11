@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Computer Science" />
+    <item android:title="Electronics and Communication"/>
+    <item android:title="Information Technology"/>
+    <item android:title="Electrical and Electronics"/>
+    <item android:title="Mechanical"/>
+    <item android:title="Biotechnology"/>
+</menu>

@@ -1,0 +1,36 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="8dp"
+android:orientation="vertical">
+
+<ImageView
+    android:id="@+id/ivThumbnail"
+    android:layout_height="0dp"
+    android:layout_width="0dp"
+    android:scaleType="fitXY"
+    android:background="@drawable/bg_spinner"
+    app:layout_constraintDimensionRatio="H,1:1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:padding="35dp"
+    app:srcCompat="@drawable/ic_pdf" />
+
+<TextView
+    android:id="@+id/tvTitle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:fontFamily="@font/montserrat"
+    android:text="cscgyisbjsccccbskcdckjsbcsdkjdc"
+    android:textSize="13sp"
+    android:padding="5sp"
+    android:textColor="#111"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/ivThumbnail" />
+
+</android.support.constraint.ConstraintLayout>

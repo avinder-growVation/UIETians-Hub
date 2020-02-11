@@ -1,0 +1,68 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:elevation="8dp"
+    android:background="@drawable/bg_spinner"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:paddingLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_margin="30dp"
+        app:layout_constraintDimensionRatio="H,5:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_rounded_image"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="150"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_spinner"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivContent">
+
+        <TextView
+            android:id="@+id/ivSample1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_weight="74"
+            android:padding="15dp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textSize="13sp"
+            android:textColor="#111"
+            android:gravity="center"
+            android:text="File 1"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:layout_weight="2" />
+
+        <TextView
+            android:id="@+id/ivSample2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_weight="74"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="#111"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="File 2"
+            android:padding="15dp"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

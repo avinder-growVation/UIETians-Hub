@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="1st" />
+    <item android:title="2nd"/>
+    <item android:title="3rd"/>
+    <item android:title="4th"/>
+    <item android:title="5th"/>
+    <item android:title="6th"/>
+    <item android:title="7th"/>
+    <item android:title="8th"/>
+</menu>

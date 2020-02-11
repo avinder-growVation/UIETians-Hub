@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+<android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/sign_back"
+    android:paddingBottom="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/ic_launcher"
+        android:src="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo">
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:alpha="0.4"
+            android:background="@drawable/bg_oval_white"
+            android:ems="10"
+            android:hint="Email"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="18sp"
+            android:paddingRight="18sp"
+            android:textColor="#000"
+            android:textColorHint="#222" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:alpha="0.4"
+            android:background="@drawable/bg_oval_white"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="18sp"
+            android:paddingRight="18sp"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textColor="#000"
+            android:textColorHint="#222"
+            android:autofillHints="" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        style="?android:textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_oval_blue"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Login"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+    <Button
+        android:id="@+id/btnResetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:textSize="15sp"
+        android:fontFamily="@font/montserrat"
+        android:text="Forgot Password"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="New User? Sign Up"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnResetPassword" />
+
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
